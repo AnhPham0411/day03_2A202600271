@@ -1,0 +1,50 @@
+# Individual Report: Lab 3 - Chatbot vs ReAct Agent
+
+- **Student Name**: Phạm Tuấn Anh
+- **Student ID**: 2A202600271
+- **Date**: 06/04/2026
+
+---
+
+## I. Technical Contribution (15 Points)
+
+*Describe your specific contribution to the codebase (e.g., implemented a specific tool, fixed the parser, etc.).*
+
+- **Modules Implementated**: Quản lý dự án (Project Management), Cấu trúc dự án (Repository Setup) & Technical Writing (tổng hợp Group Report).
+- **Code Highlights**:
+  - Khởi tạo môi trường làm việc chung (Git Repository & Google Drive) để quản lý mã nguồn và file log.
+  - Soạn thảo, chuẩn hoá các file báo cáo nhóm (`GROUP_REPORT.md`), và template/checklist công việc (như `PM_Checklist_Role6.md`).
+- **Documentation**: 
+  - Điều phối và quản trị tiến độ (Scrum/Kanban), thúc đẩy các DEV và QA hoàn thành đúng thời hạn (Milestones) cho các nhiệm vụ cụ thể (Tools, Setup API, ReAct Logging, Thu thập test case...).
+  - Thiết kế luồng kiến trúc (ReAct Loop Flowchart), tổng hợp số liệu đo lường (Telemetry) và hoàn thiện đóng gói thư mục `report/` trước khi nộp. Nhắc nhở và review báo cáo cá nhân của 5 thành viên còn lại.
+
+---
+
+## II. Debugging Case Study (10 Points)
+
+*Analyze a specific failure event you encountered during the lab using the logging system.*
+
+- **Problem Description**: Quản trị rủi ro log (Failure Analysis). Phát hiện Agen rơi vào trạng thái "khù khờ", liên tục gọi nhầm tham số hoặc lặp lại một hành động (ví dụ: `Action: get_discount` nhưng bị thiếu tham số quan trọng).
+- **Log Source**: Dữ liệu log thu thập được từ Team ở giai đoạn đầu (Agent v1) trong file log test của Mảng 5.
+- **Diagnosis**: Từ góc độ quản lý chất lượng, nguyên nhân cốt lõi (Root Cause) không chỉ nằm ở LLM, mà ở sự thiếu đồng bộ: Mô tả Tool (Def/Schema) của Mảng 2 viết chưa chặt chẽ và Prompt hướng dẫn của Mảng 1 chưa đủ rõ ràng. LLM chạy Tool mà không nhận thức được mình đã thu thập đủ dữ kiện từ người dùng hay chưa.
+- **Solution**: Điều phối 2 mảng: Yêu cầu Mảng 1 tinh chỉnh lại System Prompt (buộc Agent quy trình Hỏi người dùng -> Lấy thông tin -> Mới dùng tool), và Mảng 2 siết lại Require Parameters của JSON Schema. Theo dõi Log v2 cho thấy Agent đã thông minh và dứt khoát hơn.
+
+---
+
+## III. Personal Insights: Chatbot vs ReAct (10 Points)
+
+*Reflect on the reasoning capability difference.*
+
+1.  **Reasoning**: `Thought` giúp quá trình suy luận của mô hình rõ ràng và đa bước (Multi-step reasoning). Nó biến LLM từ một cái máy lặp lại từ (Chatbot thông thường hay bịa chuyện/hallucinate) thành một thực thể biết tự phân tích: "Mình cần check tồn kho trước, sau đó mới tính ship".
+2.  **Reliability**: Trong những trường hợp chỉ cần Small-talk, chào hỏi đơn giản, Agent thực chất lại làm hệ thống phồng rộp (tốn Token, Latency cao). Nó có thể bị "overthink" và phân tích không cần thiết, ở những điểm này Chatbot thường làm gọn nhẹ hiệu quả hơn.
+3.  **Observation**: Dữ liệu thật lấy từ Tool (Observation) đóng vai trò như một môi trường neo giữ LLM vào thực tại. Nhờ Observation trả về từ các Tool (như kết quả check tồn kho), Agent tránh được việc đoán mò và có cơ sở vững chắc sinh ra Action bước tiếp theo, hoàn toàn tự động hoá.
+
+---
+
+## IV. Future Improvements (5 Points)
+
+*How would you scale this for a production-level AI agent system?*
+
+- **Scalability**: Mở rộng (Scale) hệ thống lên mô hình **Multi-Agent**. Thay vì 1 Agent ôm đồm mọi việc, hệ thống ở môi trường Production sẽ chia thành 2 bot nhỏ giao tiếp với nhau: 1 Bot Sales (chuyên tư vấn, bán hàng, đẩy chốt deal) và 1 Bot Customer Service (chuyên check tình trạng đơn vị, khiếu nại).
+- **Safety**: Bổ sung bộ máy kiểm duyệt (Guardrails) nghiêm ngặt để bảo vệ dòng tiền doanh nghiệp. Ví dụ: cấm Agent cấp mã giảm giá > 20% trừ phi có Admin phê duyệt, chống prompt injection để không bị hack mã giảm giá 100%.
+- **Performance**: Xây dựng 1 Dashboard Telemetry giám sát thời gian thực cho Latency, Token Rate và mức tiêu thụ (Cost) qua API. Nhờ đó dễ dàng audit hệ thống (thu thập từ số liệu Mảng 5) để có quyết định scale Server/LLM Model tối ưu chi phí hơn.
