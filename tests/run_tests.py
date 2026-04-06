@@ -387,12 +387,12 @@ def run_mock_agent(user_input: str) -> dict:
 def _failure_icon(failure: dict) -> str:
     code = failure.get("code", FailureCode.OK)
     icons = {
-        FailureCode.OK:            "✅ OK",
-        FailureCode.JSON_PARSE:    "🔴 JSON_PARSE",
-        FailureCode.HALLUCINATION: "🟡 HALLUCINATION",
-        FailureCode.TIMEOUT:       "🟠 TIMEOUT",
-        FailureCode.TOOL_ERROR:    "🔵 TOOL_ERROR",
-        FailureCode.EXCEPTION:     "⚫ EXCEPTION",
+        FailureCode.OK:            "OK",
+        FailureCode.JSON_PARSE:    "JSON_PARSE",
+        FailureCode.HALLUCINATION: "HALLUCINATION",
+        FailureCode.TIMEOUT:       "TIMEOUT",
+        FailureCode.TOOL_ERROR:    "TOOL_ERROR",
+        FailureCode.EXCEPTION:     "EXCEPTION",
     }
     return icons.get(code, code)
 
