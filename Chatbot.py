@@ -14,8 +14,8 @@ SYSTEM_PROMPT = (
 def build_chatbot() -> OpenAIProvider:
     load_dotenv()
 
-    model_name = os.getenv("OPENAI_MODEL", "qwen/qwen3.6-plus:free")
-    api_key = os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY")
+    model_name = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
+    api_key = os.getenv("OPENAI_API_KEY")
 
     if not api_key:
         raise ValueError(

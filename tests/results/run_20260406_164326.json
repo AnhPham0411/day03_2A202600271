@@ -1,0 +1,176 @@
+[
+  {
+    "output": "Chào bạn! Hiện tại mình không có thông tin về tình trạng kho hàng thực tế. Bạn vui lòng cho biết bạn đang quan tâm mua iPhone 15 ở cửa hàng hoặc đại lý nào để mình có thể hỗ trợ kiểm tra giúp bạn nhé? Hoặc bạn cũng có thể truy cập website chính thức của cửa hàng đó để kiểm tra tình trạng hàng hóa nhanh chóng.",
+    "latency_ms": 3071,
+    "tools_called": [],
+    "steps": 0,
+    "error": null
+  },
+  {
+    "output": "Bạn vui lòng cho biết mã GIAM20 thuộc chương trình hoặc cửa hàng nào để mình kiểm tra chính xác giúp bạn nhé!",
+    "latency_ms": 1616,
+    "tools_called": [],
+    "steps": 0,
+    "error": null
+  },
+  {
+    "output": "Bạn vui lòng cho mình biết bạn muốn tính phí ship hàng của dịch vụ hay đơn vị vận chuyển nào nhé? Mỗi hãng sẽ có bảng giá khác nhau theo trọng lượng và khoảng cách. Nếu bạn cung cấp thêm thông tin, mình sẽ giúp bạn tính chính xác hơn!",
+    "latency_ms": 1982,
+    "tools_called": [],
+    "steps": 0,
+    "error": null
+  },
+  {
+    "output": "Chào bạn! Để tính tổng tiền hàng sau khi áp dụng mã giảm giá GIAM20 cho MacBook Air M2, mình cần biết giá gốc của chiếc MacBook Air M2 mà bạn muốn mua. Bạn có thể cung cấp giá bán hiện tại hoặc cho mình biết nơi bạn định mua (để mình có thể tra giá giúp bạn) không?",
+    "latency_ms": 2302,
+    "tools_called": [],
+    "steps": 0,
+    "error": null
+  },
+  {
+    "output": "Xin chào! Mình không có thông tin kho hàng hay dịch vụ giao hàng cụ thể của bạn. Bạn vui lòng cho biết bạn đang hỏi về cửa hàng hoặc đơn vị bán hàng nào để mình có thể hỗ trợ kiểm tra nhé?\n\nNếu bạn cần ước tính phí ship chung, phí vận chuyển sẽ phụ thuộc vào đơn vị giao hàng bạn chọn (như Giao Hàng Nhanh, VNPost, GrabExpress, v.v) và loại dịch vụ (giao nhanh, giao thường). Ví dụ:\n\n- Với khoảng cách 50km và trọng lượng 0.3kg, phí ship có thể dao động từ khoảng 20.000 - 50.000 VNĐ tùy dịch vụ.\n\nBạn có thể cung cấp thêm thông tin để mình giúp bạn chính xác hơn!",
+    "latency_ms": 3248,
+    "tools_called": [],
+    "steps": 0,
+    "error": null
+  },
+  {
+    "output": "Chào bạn! Mình cần bạn cung cấp thêm thông tin về mã giảm giá hoặc chương trình khuyến mãi bạn đang có, vì mỗi mã sẽ có điều kiện và mức giảm khác nhau. Bạn vui lòng cho mình biết rõ mã giảm giá bạn có là gì, hoặc nơi bạn nhận được mã, để mình có thể giúp bạn kiểm tra chính xác mức giảm khi mua iPhone 15 nhé!",
+    "latency_ms": 2845,
+    "tools_called": [],
+    "steps": 0,
+    "error": null
+  },
+  {
+    "output": "Hiện tại mình không truy cập được dữ liệu kho hàng thực tế, nên không thể kiểm tra chính xác xem kho còn Samsung Galaxy Z Fold 6 hay không. \n\nVề giá, bạn vui lòng cho biết rõ bạn muốn tham khảo giá của cửa hàng hoặc trang thương mại điện tử nào để mình có thể giúp bạn tính tổng tiền sau khi áp dụng mã GIAM20 nhé. \n\nThông thường, mã GIAM20 sẽ giảm 20% trên giá bán, bạn chỉ cần lấy giá niêm yết của máy, sau đó giảm 20% là được tổng tiền thanh toán. Nếu bạn cung cấp thêm thông tin, mình có thể hỗ trợ tính toán chi tiết hơn!",
+    "latency_ms": 8450,
+    "tools_called": [],
+    "steps": 0,
+    "error": null
+  },
+  {
+    "output": "Chào bạn! Để tính tổng số tiền bạn phải trả khi mua 2 iPhone 15 áp dụng mã GIAM20 và vận chuyển cách kho 30km (mỗi cái nặng 1kg), mình cần biết:\n\n1. Giá niêm yết của iPhone 15 bạn muốn mua.\n2. Chính sách giảm giá từ mã GIAM20 (ví dụ: giảm bao nhiêu %, giảm bao nhiêu tiền).\n3. Phí vận chuyển tính theo khoảng cách hoặc trọng lượng như thế nào.\n\nBạn có thể cung cấp thêm thông tin trên được không? Nếu bạn đã có các thông tin này, mình sẽ giúp bạn tính toán chi tiết nhé!",
+    "latency_ms": 2665,
+    "tools_called": [],
+    "steps": 0,
+    "error": null
+  },
+  {
+    "output": "Chào bạn! Mình cần kiểm tra kho AirPods Pro giúp bạn nhé.\n\n- Bạn vui lòng cho biết bạn đang ở khu vực/quận/huyện nào để mình tính phí ship chính xác.\n- Hiện tại, mã SALE10 áp dụng giảm giá 10% trên giá sản phẩm (nếu bạn chỉ muốn tính tiền ship thì mình sẽ không áp mã nhé).\n- Nếu bạn chỉ muốn tính tiền ship và mua 1 chiếc AirPods Pro, mình sẽ báo phí ship theo khoảng cách 50km từ cửa hàng tới nhà bạn.\n\nBạn vui lòng cung cấp thêm thông tin về địa chỉ cụ thể hoặc khu vực nhé!",
+    "latency_ms": 2357,
+    "tools_called": [],
+    "steps": 0,
+    "error": null
+  },
+  {
+    "output": "Chào bạn! Để giúp bạn tính tổng tiền khi mua đồ Apple rẻ nhất và áp mã SALE10, mình cần một số thông tin cụ thể hơn:\n\n1. Bạn muốn mua sản phẩm Apple nào? (ví dụ: iPhone, AirPods, Apple Watch,...) hoặc bạn muốn mình tìm giúp sản phẩm Apple rẻ nhất hiện có trên thị trường?\n2. Phí vận chuyển: Bạn có biết phí ship cho khoảng cách 200km là bao nhiêu không, hoặc bạn có muốn mình ước lượng?\n\nNếu bạn chưa có thông tin cụ thể, mình có thể liệt kê vài sản phẩm Apple có giá thấp nhất hiện nay để bạn tham khảo. Bạn vui lòng cho mình biết nhé!",
+    "latency_ms": 2647,
+    "tools_called": [],
+    "steps": 0,
+    "error": null
+  },
+  {
+    "output": "Hiện tại, còn 10 chiếc iPhone 15 128GB trong kho.",
+    "latency_ms": 3569,
+    "tools_called": [
+      "check_inventory"
+    ],
+    "steps": 1,
+    "error": null
+  },
+  {
+    "output": "Mã giảm giá GIAM20 còn hiệu lực và giảm 20%.",
+    "latency_ms": 4195,
+    "tools_called": [
+      "get_discount"
+    ],
+    "steps": 1,
+    "error": null
+  },
+  {
+    "output": "Phí ship hàng 2kg với khoảng cách 15km là 40.000 VND.",
+    "latency_ms": 2747,
+    "tools_called": [
+      "calc_shipping_fee"
+    ],
+    "steps": 1,
+    "error": null
+  },
+  {
+    "output": "Tổng tiền hàng sau giảm là 22.400.000 VND.",
+    "latency_ms": 5444,
+    "tools_called": [
+      "check_inventory",
+      "get_discount"
+    ],
+    "steps": 2,
+    "error": null
+  },
+  {
+    "output": "AirPods Pro 2 hiện có 15 sản phẩm tồn kho. Phí ship về nhà bạn cách 50km (nặng 0.3kg) là 66.500 VND.",
+    "latency_ms": 5194,
+    "tools_called": [
+      "check_inventory",
+      "calc_shipping_fee"
+    ],
+    "steps": 2,
+    "error": null
+  },
+  {
+    "output": "Mã giảm giá bạn cung cấp không áp dụng, bạn sẽ không được giảm giá khi mua iPhone 15.",
+    "latency_ms": 3024,
+    "tools_called": [
+      "get_discount"
+    ],
+    "steps": 1,
+    "error": null
+  },
+  {
+    "output": "Xin lỗi, hiện tại tôi không tìm thấy sản phẩm nào trong kho.",
+    "latency_ms": 7569,
+    "tools_called": [
+      "check_inventory",
+      "search_product",
+      "check_inventory",
+      "check_inventory"
+    ],
+    "steps": 4,
+    "error": null
+  },
+  {
+    "output": "Tổng chi phí là 38.400.000 VND (đã giảm 20%) + phí ship 55.000 VND. Tổng cộng bạn cần trả 38.455.000 VND.",
+    "latency_ms": 7721,
+    "tools_called": [
+      "check_inventory",
+      "get_discount",
+      "calc_shipping_fee"
+    ],
+    "steps": 3,
+    "error": null
+  },
+  {
+    "output": "Phí ship cho đơn hàng sẽ là 65.500 VND.",
+    "latency_ms": 3893,
+    "tools_called": [
+      "check_inventory",
+      "calc_shipping_fee"
+    ],
+    "steps": 2,
+    "error": null
+  },
+  {
+    "output": "Tổng chi phí là 25.421.000 VND (đã giảm 10%) + phí ship 221.000 VND.",
+    "latency_ms": 18038,
+    "tools_called": [
+      "search_product",
+      "search_product",
+      "search_product",
+      "check_inventory",
+      "check_inventory",
+      "get_discount",
+      "calc_shipping_fee"
+    ],
+    "steps": 7,
+    "error": null
+  }
+]
