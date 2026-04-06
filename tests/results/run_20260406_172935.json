@@ -1,0 +1,275 @@
+[
+  {
+    "output": "Chào bạn! Hiện tại mình không có thông tin kho hàng cụ thể. Bạn vui lòng cho biết bạn đang quan tâm đến cửa hàng hoặc hệ thống bán lẻ nào để mình có thể hỗ trợ kiểm tra giúp bạn nhé! Hoặc bạn cũng có thể truy cập website chính thức của Apple hoặc các cửa hàng ủy quyền để kiểm tra tình trạng kho hàng iPhone 15.",
+    "latency_ms": 2535,
+    "tools_called": [],
+    "steps": 0,
+    "tokens": {
+      "prompt_tokens": 15,
+      "completion_tokens": 80,
+      "total_tokens": 95
+    },
+    "error": null
+  },
+  {
+    "output": "Bạn vui lòng cho biết mã GIAM20 sử dụng trên trang web hoặc cửa hàng nào để tôi có thể kiểm tra thông tin chính xác cho bạn nhé?",
+    "latency_ms": 1292,
+    "tools_called": [],
+    "steps": 0,
+    "tokens": {
+      "prompt_tokens": 25,
+      "completion_tokens": 32,
+      "total_tokens": 57
+    },
+    "error": null
+  },
+  {
+    "output": "Bạn vui lòng cho mình biết bạn đang sử dụng dịch vụ giao hàng của đơn vị nào hoặc vùng miền cụ thể để mình có thể tính phí ship chính xác hơn nhé? Vì mỗi hãng vận chuyển có bảng giá khác nhau dựa trên cân nặng và khoảng cách.",
+    "latency_ms": 1728,
+    "tools_called": [],
+    "steps": 0,
+    "tokens": {
+      "prompt_tokens": 21,
+      "completion_tokens": 55,
+      "total_tokens": 76
+    },
+    "error": null
+  },
+  {
+    "output": "Chào bạn! Để giúp bạn tính tổng tiền hàng sau khi áp dụng mã GIAM20 khi mua MacBook Air M2, mình cần biết:\n\n1. Giá gốc của chiếc MacBook Air M2 mà bạn muốn mua.\n2. Điều kiện áp mã GIAM20 (ví dụ: giảm bao nhiêu %, hoặc giảm bao nhiêu tiền).\n3. Có các khoản phí khác như thuế, phí vận chuyển hay không?\n\nBạn có thể cung cấp thêm thông tin để mình tính giúp bạn tổng tiền chính xác hơn nhé!",
+    "latency_ms": 2147,
+    "tools_called": [],
+    "steps": 0,
+    "tokens": {
+      "prompt_tokens": 35,
+      "completion_tokens": 111,
+      "total_tokens": 146
+    },
+    "error": null
+  },
+  {
+    "output": "Mình không có thông tin về kho hàng và dịch vụ giao hàng cụ thể của bạn. Tuy nhiên, nếu bạn cho mình biết bạn đang hỏi cửa hàng hay dịch vụ nào, mình có thể giúp bạn ước tính chi phí hoặc hướng dẫn cách kiểm tra.\n\nNgoài ra, nếu bạn muốn biết giá ship AirPods Pro (nặng khoảng 0.3kg) đi khoảng 50km, theo một số dịch vụ vận chuyển phổ biến ở Việt Nam như Giao Hàng Nhanh, Giao Hàng Tiết Kiệm, hoặc Vietnam Post, chi phí thường dao động từ khoảng 20,000 đến 50,000 đồng tùy vào dịch vụ và loại hình giao hàng bạn chọn.\n\nBạn có thể cung cấp thêm thông tin về cửa hàng hoặc dịch vụ bạn muốn sử dụng không? Mình sẽ giúp bạn cụ thể hơn nhé!",
+    "latency_ms": 2863,
+    "tools_called": [],
+    "steps": 0,
+    "tokens": {
+      "prompt_tokens": 43,
+      "completion_tokens": 177,
+      "total_tokens": 220
+    },
+    "error": null
+  },
+  {
+    "output": "Chào bạn! Mình cần biết mã giảm giá **XXXXXXX** của bạn thuộc chương trình khuyến mãi nào hoặc do hãng, cửa hàng nào phát hành để có thể kiểm tra mức giảm cụ thể khi mua iPhone 15. Bạn có thể cung cấp thêm thông tin về nguồn gốc của mã giảm giá hoặc nơi bạn nhận được mã đó không? \n\nNếu bạn có thể cho mình biết thêm chi tiết, mình sẽ giúp bạn tính toán số tiền được giảm nhé!",
+    "latency_ms": 1950,
+    "tools_called": [],
+    "steps": 0,
+    "tokens": {
+      "prompt_tokens": 28,
+      "completion_tokens": 99,
+      "total_tokens": 127
+    },
+    "error": null
+  },
+  {
+    "output": "Hiện tại mình không thể truy cập trực tiếp kho hàng hoặc cập nhật giá bán thời gian thực. Để biết Samsung Galaxy Z Fold 6 còn hàng không và giá sau khi áp mã GIAM20, bạn vui lòng:\n\n1. Truy cập website hoặc ứng dụng của cửa hàng bạn muốn mua (ví dụ: Samsung, Thế Giới Di Động, Điện Máy Xanh...).\n2. Tìm sản phẩm Samsung Galaxy Z Fold 6.\n3. Kiểm tra tình trạng kho có còn hàng không.\n4. Nhập mã GIAM20 khi thanh toán để xem giá cuối cùng sau khi giảm.\n\nNếu bạn cần, mình có thể hướng dẫn cách kiểm tra hoặc gửi link cửa hàng uy tín để bạn tham khảo!",
+    "latency_ms": 3057,
+    "tools_called": [],
+    "steps": 0,
+    "tokens": {
+      "prompt_tokens": 33,
+      "completion_tokens": 153,
+      "total_tokens": 186
+    },
+    "error": null
+  },
+  {
+    "output": "Bạn cho mình thêm một số thông tin để tính chi phí chính xác nhé:\n- Giá niêm yết của mỗi iPhone 15 là bao nhiêu?\n- Mã GIAM20 giảm giá bao nhiêu phần trăm hoặc số tiền cụ thể?\n- Phí vận chuyển tính theo km hoặc có bảng phí rõ ràng không?\n\nNếu bạn cung cấp những thông tin trên, mình sẽ giúp bạn tính tổng chi phí phải trả nhé!",
+    "latency_ms": 1865,
+    "tools_called": [],
+    "steps": 0,
+    "tokens": {
+      "prompt_tokens": 48,
+      "completion_tokens": 91,
+      "total_tokens": 139
+    },
+    "error": null
+  },
+  {
+    "output": "Chào bạn! Mình rất tiếc, hiện tại mình không thể kiểm tra kho hàng trực tiếp hoặc xử lý đơn hàng. Bạn vui lòng liên hệ trực tiếp cửa hàng hoặc trang web bán AirPods Pro để biết tình trạng hàng còn hay không, cũng như chi tiết về phí ship khi áp dụng mã SALE10 và khoảng cách vận chuyển 50km.\n\nNếu bạn cần, mình có thể giúp bạn ước tính phí ship hoặc hướng dẫn cách đặt hàng. Bạn cần hỗ trợ thêm không?",
+    "latency_ms": 2075,
+    "tools_called": [],
+    "steps": 0,
+    "tokens": {
+      "prompt_tokens": 47,
+      "completion_tokens": 102,
+      "total_tokens": 149
+    },
+    "error": null
+  },
+  {
+    "output": "Chào bạn! Để giúp bạn tính tổng tiền khi mua đồ Apple với mã giảm giá và phí vận chuyển, mình cần thêm một số thông tin cụ thể:\n\n1. Bạn muốn mua sản phẩm Apple nào? (iPhone, iPad, MacBook, phụ kiện, v.v.)\n2. Khoảng giá hoặc dòng sản phẩm bạn quan tâm để mình chọn sản phẩm rẻ nhất hiện tại.\n3. Phí vận chuyển hoặc thông tin về đơn vị vận chuyển của bạn (nếu bạn biết) để tính phí ship cho 200km.\n\nNếu bạn chưa có thông tin về sản phẩm cụ thể, mình có thể liệt kê một số sản phẩm Apple rẻ nhất đang được bán phổ biến để bạn lựa chọn.\n\nBạn có thể cung cấp thêm thông tin được không?",
+    "latency_ms": 2249,
+    "tools_called": [],
+    "steps": 0,
+    "tokens": {
+      "prompt_tokens": 39,
+      "completion_tokens": 161,
+      "total_tokens": 200
+    },
+    "error": null
+  },
+  {
+    "output": "Hiện tại có 10 chiếc iPhone 15 trong kho.",
+    "latency_ms": 4630,
+    "tools_called": [
+      "check_inventory"
+    ],
+    "steps": 1,
+    "tokens": {
+      "prompt_tokens": 1554,
+      "completion_tokens": 61,
+      "total_tokens": 1615
+    },
+    "error": null
+  },
+  {
+    "output": "Mã GIAM20 còn hiệu lực và giảm giá 20%.",
+    "latency_ms": 2646,
+    "tools_called": [
+      "get_discount"
+    ],
+    "steps": 1,
+    "tokens": {
+      "prompt_tokens": 1557,
+      "completion_tokens": 80,
+      "total_tokens": 1637
+    },
+    "error": null
+  },
+  {
+    "output": "Phí ship cho hàng 2kg, khoảng cách 15km là 40.000 VND.",
+    "latency_ms": 2935,
+    "tools_called": [
+      "calc_shipping_fee"
+    ],
+    "steps": 1,
+    "tokens": {
+      "prompt_tokens": 1548,
+      "completion_tokens": 78,
+      "total_tokens": 1626
+    },
+    "error": null
+  },
+  {
+    "output": "Tổng tiền hàng sau giảm là 22.400.000 VND.",
+    "latency_ms": 4083,
+    "tools_called": [
+      "check_inventory",
+      "get_discount"
+    ],
+    "steps": 2,
+    "tokens": {
+      "prompt_tokens": 2503,
+      "completion_tokens": 159,
+      "total_tokens": 2662
+    },
+    "error": null
+  },
+  {
+    "output": "AirPods Pro còn trong kho với 15 chiếc. Phí ship về nhà bạn cách 50km là 66.500 VND.",
+    "latency_ms": 5820,
+    "tools_called": [
+      "check_inventory",
+      "calc_shipping_fee"
+    ],
+    "steps": 2,
+    "tokens": {
+      "prompt_tokens": 2509,
+      "completion_tokens": 133,
+      "total_tokens": 2642
+    },
+    "error": null
+  },
+  {
+    "output": "Mã giảm giá không hợp lệ, bạn sẽ không được giảm giá khi mua iPhone 15.",
+    "latency_ms": 2783,
+    "tools_called": [
+      "get_discount"
+    ],
+    "steps": 1,
+    "tokens": {
+      "prompt_tokens": 1553,
+      "completion_tokens": 73,
+      "total_tokens": 1626
+    },
+    "error": null
+  },
+  {
+    "output": "Giá Xiaomi Redmi Note 12 là 5.000.000 VND, sau khi áp dụng mã giảm giá GIAM20 (giảm 20%), giá còn lại là 4.000.000 VND.",
+    "latency_ms": 11719,
+    "tools_called": [
+      "check_inventory",
+      "search_product",
+      "check_inventory",
+      "check_inventory",
+      "check_inventory",
+      "check_inventory",
+      "get_discount"
+    ],
+    "steps": 7,
+    "tokens": {
+      "prompt_tokens": 7782,
+      "completion_tokens": 407,
+      "total_tokens": 8189
+    },
+    "error": null
+  },
+  {
+    "output": "Tổng chi phí là 38.000.000 VND (đã giảm 20%) + phí ship 55.000 VND.",
+    "latency_ms": 6420,
+    "tools_called": [
+      "check_inventory",
+      "get_discount",
+      "calc_shipping_fee"
+    ],
+    "steps": 3,
+    "tokens": {
+      "prompt_tokens": 3539,
+      "completion_tokens": 216,
+      "total_tokens": 3755
+    },
+    "error": null
+  },
+  {
+    "output": "Phí vận chuyển cho AirPods Pro 2 là 67.500 VND.",
+    "latency_ms": 4569,
+    "tools_called": [
+      "check_inventory",
+      "calc_shipping_fee"
+    ],
+    "steps": 2,
+    "tokens": {
+      "prompt_tokens": 2521,
+      "completion_tokens": 125,
+      "total_tokens": 2646
+    },
+    "error": null
+  },
+  {
+    "output": "Rất tiếc, hiện tại không có sản phẩm Apple nào có sẵn để mua.",
+    "latency_ms": 5899,
+    "tools_called": [
+      "search_product",
+      "search_product",
+      "search_product"
+    ],
+    "steps": 3,
+    "tokens": {
+      "prompt_tokens": 3502,
+      "completion_tokens": 174,
+      "total_tokens": 3676
+    },
+    "error": null
+  }
+]

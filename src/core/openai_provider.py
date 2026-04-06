@@ -9,8 +9,8 @@ class OpenAIProvider(LLMProvider):
         resolved_api_key = api_key or os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY")
         super().__init__(model_name, resolved_api_key)
         self.client = OpenAI(
-            api_key=self.api_key,
-            base_url=os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
+            api_key=self.api_key
+        
         )
 
     def generate(self, prompt: str, system_prompt: Optional[str] = None) -> Dict[str, Any]:
