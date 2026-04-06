@@ -10,6 +10,12 @@
 
 Agent E-commerce của nhóm đạt **7/10 test cases** (70%) trong lần chạy thật đầu tiên (Agent v1), so với Chatbot baseline đạt **0/10** — chatbot không gọi được tool nào, toàn bộ câu trả lời là hỏi ngược lại user hoặc thừa nhận không có dữ liệu.
 
+Sau lần chạy đầu, nhóm đã thực hiện một bản vá cho `ReActAgent` (gọi là Agent v2) để cải thiện chất lượng Final Answer. Những thay đổi chính:
+
+- Hệ thống prompt được thắt chặt: bắt buộc Final Answer theo mẫu `User intent: ...` và `Answer: ...`, với yêu cầu rõ ràng là "Answer" phải ngắn gọn (tối đa 2 câu).
+- Thêm hàm `_normalize_final_answer()` để rút gọn và chuẩn hóa Final Answer trước khi agent trả về cho người dùng.
+- Tích hợp bước chuẩn hóa này vào vòng lặp `run()` để đảm bảo mọi Final Answer tuân thủ quy tắc ngắn gọn và xác định rõ ý định người dùng.
+
 - **Success Rate**: 70% (Agent v1) vs 0% (Chatbot) trên 10 test cases thực tế
 - **Key Outcome**: Agent giải quyết đúng 100% các câu hỏi multi-step (TC-04, TC-05, TC-07, TC-08) bằng cách tự động chuỗi 2-3 tool calls liên tiếp, trong khi Chatbot từ chối hoặc hỏi lại user ở tất cả các case này.
 
@@ -142,6 +148,20 @@ Với câu hỏi đơn giản 1-step (TC-01 đến TC-03), Chatbot tốn trung b
 - **Guardrails**: `max_steps=8` hiện tại, cần giảm xuống 5-6 cho production để tránh billing runaway. Thêm budget cap: nếu tổng token vượt 5,000, tự động trả về partial answer.
 - **Scaling**: Chuyển sang LangGraph cho workflow phức tạp hơn. Thêm Redis cache cho tool results hay được gọi lặp (ví dụ: giá iPhone 15 không đổi trong 1 session).
 - **Observability**: Logger hiện tại ghi file local — production cần ship logs lên CloudWatch hoặc Datadog để alert real-time khi error rate tăng.
+
+---
+
+## 7. Agent v2 — Chi tiết thay đổi code
+
+- File chính: [src/agent/agent.py](src/agent/agent.py)
+- Mô tả thay đổi:
+    - `get_system_prompt()` được chỉnh sửa để yêu cầu Final Answer bắt đầu bằng `User intent:` rồi `Answer:`, và nhắc LLM giữ `Answer` ngắn gọn (tối đa 2 câu).
+    - Thêm helper `_normalize_final_answer(final_answer: str) -> str`:
+        - Nếu LLM tuân thủ mẫu `User intent`/`Answer`, helper giữ `User intent` và rút gọn `Answer` xuống tối đa 2 câu.
+        - Nếu LLM không tuân thủ mẫu, helper rút gọn toàn bộ Final Answer xuống tối đa 2 câu và trả về dưới dạng ngắn gọn.
+    - Trong `run()`, trước khi chấp nhận `Final Answer`, agent gọi `_normalize_final_answer()` rồi mới log và break.
+
+Lý do: những thay đổi này giảm rủi ro LLM trả lời dài dòng, thiếu trọng tâm, hoặc không làm rõ ý định người dùng — đặc biệt hữu dụng cho giao diện sản phẩm nơi câu trả lời phải ngắn, chính xác, và dễ xử lý tự động.
 
 ---
 

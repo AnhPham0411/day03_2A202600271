@@ -116,44 +116,50 @@ class ReActAgent:
         """
         return f"""Bạn là trợ lý bán hàng E-commerce thông minh, luôn suy luận từng bước.
 
-Bạn có thể sử dụng các công cụ (tool) sau:
-{self.tool_descriptions}
+    Bạn có thể sử dụng các công cụ (tool) sau:
+    {self.tool_descriptions}
 
-══════════════════════════════════════════
-ĐỊNH DẠNG BẮT BUỘC — không được lệch dù một ký tự:
-══════════════════════════════════════════
+    ══════════════════════════════════════════
+    ĐỊNH DẠNG BẮT BUỘC — không được lệch dù một ký tự:
+    ══════════════════════════════════════════
 
-Khi cần gọi tool:
-Thought: <lý do bạn cần gọi tool này>
-Action: <tên tool chính xác>
-Action Input: <tham số, nếu nhiều tham số thì phân cách bằng dấu phẩy>
+    Khi cần gọi tool:
+    Thought: <lý do bạn cần gọi tool này>
+    Action: <tên tool chính xác>
+    Action Input: <tham số, nếu nhiều tham số thì phân cách bằng dấu phẩy>
 
-Khi đã có đủ thông tin để trả lời:
-Thought: <lý do bạn đã đủ thông tin>
-Final Answer: <câu trả lời hoàn chỉnh cho người dùng>
+    Khi đã có đủ thông tin để trả lời:
+    Thought: <lý do bạn đã đủ thông tin>
+    Final Answer: User intent: <một dòng diễn đạt mục đích/ý định người dùng>
+    Answer: <câu trả lời ngắn gọn, chính xác — TỐI ĐA 2 câu>
 
-══════════════════════════════════════════
-QUY TẮC QUAN TRỌNG:
-══════════════════════════════════════════
-- Mỗi lượt CHỈ xuất ra một cặp (Thought + Action + Action Input) HOẶC (Thought + Final Answer).
-- KHÔNG bịa đặt kết quả tool — chờ Observation từ hệ thống.
-- KHÔNG dùng markdown, JSON, hay code block trong Action Input.
-- Nếu tool báo lỗi, đọc lỗi trong Observation và thử cách khác.
+    ══════════════════════════════════════════
+    QUY TẮC QUAN TRỌNG:
+    ══════════════════════════════════════════
+    - Mỗi lượt CHỈ xuất ra một trong hai dạng sau:
+      • Thought / Action / Action Input
+      • Thought / Final Answer
+    - Final Answer phải bắt đầu bằng 'User intent:' rồi 'Answer:'.
+    - Final Answer phải ngắn gọn, tối đa 2 câu, không lan man.
+    - KHÔNG bịa đặt kết quả tool — chờ Observation từ hệ thống.
+    - KHÔNG dùng markdown, JSON, hay code block trong Action Input hay Final Answer.
+    - Nếu tool báo lỗi, đọc lỗi trong Observation và thử cách khác.
 
-Ví dụ 1 — kiểm tra sản phẩm:
-Thought: Tôi cần kiểm tra giá và tồn kho của iPhone 15 trước.
-Action: check_inventory
-Action Input: iphone 15
+    Ví dụ 1 — kiểm tra sản phẩm:
+    Thought: Tôi cần kiểm tra giá và tồn kho của iPhone 15 trước.
+    Action: check_inventory
+    Action Input: iphone 15
 
-Ví dụ 2 — nhiều tham số:
-Thought: Tôi cần tính phí ship, khoảng cách 10km, hàng nặng 0.5kg.
-Action: calc_shipping_fee
-Action Input: 10, 0.5
+    Ví dụ 2 — nhiều tham số:
+    Thought: Tôi cần tính phí ship, khoảng cách 10km, hàng nặng 0.5kg.
+    Action: calc_shipping_fee
+    Action Input: 10, 0.5
 
-Ví dụ 3 — kết thúc:
-Thought: Tôi đã có đủ thông tin về giá, giảm giá và phí ship.
-Final Answer: Tổng chi phí là 21.500.000 VND (đã giảm 20%) + phí ship 25.000 VND.
-"""
+    Ví dụ 3 — kết thúc (mẫu Final Answer):
+    Thought: Tôi đã có đủ thông tin về giá, giảm giá và phí ship.
+    Final Answer: User intent: Tính tổng chi phí cho đơn hàng.
+    Answer: Tổng chi phí là 21.500.000 VND (đã giảm 20%) + phí ship 25.000 VND.
+    """
 
     # ------------------------------------------------------------------
     # 2. Parser  —  bóc tách output của LLM
@@ -238,6 +244,34 @@ Final Answer: Tổng chi phí là 21.500.000 VND (đã giảm 20%) + phí ship 2
             "  • Thought / Final Answer"
         )
 
+    def _normalize_final_answer(self, final_answer: str) -> str:
+        """
+        Chuẩn hóa Final Answer để đảm bảo ngắn gọn và rõ ràng:
+        - Nếu LLM tuân thủ mẫu 'User intent: ...\nAnswer: ...', giữ cấu trúc đó.
+        - Rút gọn phần Answer còn tối đa 2 câu nếu quá dài.
+        - Nếu không có mẫu, trả về tối đa 2 câu đầu của final_answer.
+        """
+        if not final_answer:
+            return final_answer
+
+        # Tìm mẫu 'User intent: ...' và 'Answer: ...'
+        m = re.search(r"User intent\s*:\s*(.+?)\s*Answer\s*:\s*(.+)", final_answer, re.IGNORECASE | re.DOTALL)
+        if m:
+            intent = m.group(1).strip()
+            answer = m.group(2).strip()
+        else:
+            # Không có intent rõ ràng — coi toàn bộ là answer
+            intent = None
+            answer = final_answer.strip()
+
+        # Rút gọn answer xuống tối đa 2 câu
+        sentences = re.split(r'(?<=[.!?])\s+', answer)
+        short_answer = " ".join(sentences[:2]).strip()
+
+        if intent:
+            return f"User intent: {intent}\nAnswer: {short_answer}"
+        return short_answer
+
     # ------------------------------------------------------------------
     # 4. Vòng lặp chính
     # ------------------------------------------------------------------
@@ -270,7 +304,8 @@ Final Answer: Tổng chi phí là 21.500.000 VND (đã giảm 20%) + phí ship 2
 
             # ── Final Answer → kết thúc ────────────────────────────────────
             if parsed.is_final:
-                final_answer = parsed.final_answer
+                # Chuẩn hóa Final Answer để ngắn gọn, rõ ý định người dùng
+                final_answer = self._normalize_final_answer(parsed.final_answer)
                 logger.log_event("AGENT_FINAL", {"answer": final_answer, "steps": step})
                 break
 
